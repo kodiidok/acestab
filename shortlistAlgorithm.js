@@ -29,8 +29,7 @@ function include(filename) {
 
 function main () {
   try {
-    // const ss = SpreadsheetApp.openById('1f47T-d4Tw6hPwO_VaBC_A1i8p2xb6GrCZ_I6InqxE0c');
-    const ss = SpreadsheetApp.openById('1QdubFe5pbNQyevoK_LQS021OPrYxve_aGuD9xGEUI4o');
+    const ss = SpreadsheetApp.openById('sheet_id');
     
     // const bdegree_sheet_name = 'basicDegreeTitles';
     // const pgdegree_sheet_name = 'pgDegreeTitles';
@@ -89,7 +88,7 @@ function genRegex (retdata, type) {
 /** loads data from database */
 function loadsheet () {
   try {
-    const ss = SpreadsheetApp.openById('1-ujGTvr04DYNSEMDn4JYiO0x5jjwt8wBnXP61X07VTI');
+    const ss = SpreadsheetApp.openById('sheet_id');
     const sheetName = 'mainsheet';
     const ws = ss.getSheetByName(sheetName);
     const data = ws.getDataRange().getValues();
@@ -103,8 +102,7 @@ function loadsheet () {
 /** loads the saving database and returns the mainsheet */
 function savesheet () {
   try {
-    // const ss = SpreadsheetApp.openById('1f47T-d4Tw6hPwO_VaBC_A1i8p2xb6GrCZ_I6InqxE0c');
-    const ss = SpreadsheetApp.openById('1-ujGTvr04DYNSEMDn4JYiO0x5jjwt8wBnXP61X07VTI');
+    const ss = SpreadsheetApp.openById('sheet_id');
     const sheetName = 'mainsheet';
     const ws = ss.getSheetByName(sheetName);
     return ws;
